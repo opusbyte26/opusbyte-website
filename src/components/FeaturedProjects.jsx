@@ -10,17 +10,17 @@ export default function FeaturedProjects() {
   const featuredList = projectsData.slice(0, 4);
 
   return (
-    <section className="py-24 bg-[#F8F9F3] border-t border-[#E1E5D3]">
+    <section className="py-24 bg-[#F8FAFC] border-t border-[#E2E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-3 max-w-2xl">
             <div className="section-label">05 — SELECTED WORK</div>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-[#3F481A]">
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0F172A]">
               Digital products built to make an impact.
             </h2>
-            <p className="text-base text-[#68705A]">
+            <p className="text-base text-[#64748B]">
               Explore a selection of digital experiences, software systems, and intelligent solutions built around real-world challenges.
             </p>
           </div>
@@ -50,10 +50,10 @@ export default function FeaturedProjects() {
                   tabIndex={0}
                   onClick={() => setSelectedProject(project)}
                   onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setSelectedProject(project); }}
-                  className="group relative cursor-pointer bg-[#FFFFFF] rounded-2xl border border-[#E1E5D3] hover:border-[#BDC033] overflow-hidden shadow-xs hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1.5 flex flex-col h-full"
+                  className="group relative cursor-pointer bg-[#FFFFFF] rounded-2xl border border-[#E2E8F0] hover:border-[#2563EB] overflow-hidden shadow-xs hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1.5 flex flex-col h-full"
                 >
                   {/* Image Container with Zoom & Gradient */}
-                  <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#3F481A]">
+                  <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#0F172A]">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -61,40 +61,40 @@ export default function FeaturedProjects() {
                     />
                     
                     {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#3F481A]/80 via-[#3F481A]/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-[#0F172A]/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
 
                     {/* Top Badges */}
                     <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
-                      <span className="px-3 py-1 rounded-full bg-[#FFFFFF]/90 backdrop-blur text-[#3F481A] text-xs font-bold shadow-xs">
+                      <span className="px-3 py-1 rounded-full bg-[#FFFFFF]/90 backdrop-blur text-[#0F172A] text-xs font-bold shadow-xs">
                         {project.category}
                       </span>
-                      <span className="px-2.5 py-1 rounded-full bg-[#3F481A]/80 backdrop-blur text-[#EEF2C9] text-[11px] font-medium border border-[#65721F]">
+                      <span className="px-2.5 py-1 rounded-full bg-[#0F172A]/80 backdrop-blur text-[#DBEAFE] text-[11px] font-medium border border-[#2563EB]/40">
                         {project.industry}
                       </span>
                     </div>
 
-                    {/* Expandable Lime Accent Line */}
-                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#BDC033] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-20"></div>
+                    {/* Expandable Accent Line */}
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#2563EB] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-20"></div>
                   </div>
 
                   {/* Card Content Body */}
                   <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
                     <div className="space-y-3">
-                      <h3 className="text-xl sm:text-2xl font-bold text-[#3F481A] group-hover:text-[#65721F] transition-colors leading-snug">
+                      <h3 className="text-xl sm:text-2xl font-bold text-[#0F172A] group-hover:text-[#2563EB] transition-colors leading-snug">
                         {project.title}
                       </h3>
-                      <p className="text-sm text-[#68705A] leading-relaxed line-clamp-2">
+                      <p className="text-sm text-[#64748B] leading-relaxed line-clamp-2">
                         {project.shortDescription}
                       </p>
                     </div>
 
                     {/* Technology Stack Tags & Arrow */}
-                    <div className="pt-4 border-t border-[#E1E5D3]/60 flex items-center justify-between gap-4">
+                    <div className="pt-4 border-t border-[#E2E8F0] flex items-center justify-between gap-4">
                       <div className="flex flex-wrap gap-1.5">
                         {project.techStack.slice(0, 4).map((tech) => (
                           <span
                             key={tech}
-                            className="px-2.5 py-1 rounded-md bg-[#F8F9F3] text-[#68705A] group-hover:bg-[#EEF2C9] group-hover:text-[#3F481A] text-xs font-medium transition-colors"
+                            className="px-2.5 py-1 rounded-md bg-[#F1F5F9] text-[#64748B] group-hover:bg-[#DBEAFE] group-hover:text-[#0F172A] text-xs font-medium transition-colors"
                           >
                             {tech}
                           </span>
@@ -105,7 +105,7 @@ export default function FeaturedProjects() {
                         type="button"
                         onClick={(e) => { e.stopPropagation(); setSelectedProject(project); }}
                         aria-label="View Case Study"
-                        className="w-10 h-10 rounded-full bg-[#F8F9F3] group-hover:bg-[#BDC033] flex items-center justify-center text-[#3F481A] transition-all duration-300 shrink-0 border-none cursor-pointer"
+                        className="w-10 h-10 rounded-full bg-[#F1F5F9] group-hover:bg-[#2563EB] flex items-center justify-center text-[#0F172A] group-hover:text-[#FFFFFF] transition-all duration-300 shrink-0 border-none cursor-pointer"
                       >
                         <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </button>
@@ -120,9 +120,9 @@ export default function FeaturedProjects() {
 
         {/* Section Bottom Nav CTA */}
         <div className="pt-4 text-center">
-          <Link href="/projects" className="inline-flex items-center gap-2 text-base font-bold text-[#65721F] hover:text-[#3F481A] transition-colors text-decoration-none">
+          <Link href="/projects" className="inline-flex items-center gap-2 text-base font-bold text-[#2563EB] hover:text-[#0F172A] transition-colors text-decoration-none">
             <span>Explore all case studies in our project portfolio</span>
-            <ArrowUpRight className="w-5 h-5 text-[#BDC033]" />
+            <ArrowUpRight className="w-5 h-5 text-[#2563EB]" />
           </Link>
         </div>
 

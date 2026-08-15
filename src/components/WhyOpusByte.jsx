@@ -37,16 +37,16 @@ export default function WhyOpusByte() {
   ];
 
   return (
-    <section className="py-24 bg-[#F8F9F3]">
+    <section className="py-24 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="section-label justify-center">08 — WHY OPUSBYTE</div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#3F481A]">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0F172A]">
             Built around engineering. Driven by innovation.
           </h2>
-          <p className="text-base sm:text-lg text-[#68705A]">
+          <p className="text-base sm:text-lg text-[#64748B]">
             Why enterprise leaders choose OpusByte to power their critical digital products and cloud transformations.
           </p>
         </div>
@@ -65,15 +65,15 @@ export default function WhyOpusByte() {
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="opus-card p-8 space-y-4 bg-[#FFFFFF]"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#EEF2C9] border border-[#BDC033]/40 flex items-center justify-center text-[#65721F]">
+                <div className="w-12 h-12 rounded-xl bg-[#DBEAFE] border border-[#2563EB]/30 flex items-center justify-center text-[#2563EB]">
                   <IconComponent className="w-6 h-6" />
                 </div>
 
-                <h3 className="text-xl font-bold text-[#3F481A]">
+                <h3 className="text-xl font-bold text-[#0F172A]">
                   {vp.title}
                 </h3>
 
-                <p className="text-sm text-[#68705A] leading-relaxed">
+                <p className="text-sm text-[#64748B] leading-relaxed">
                   {vp.desc}
                 </p>
               </motion.div>
