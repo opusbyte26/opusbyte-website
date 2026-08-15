@@ -21,7 +21,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#F8F9F3] text-[#3F481A]">
+    <div className="flex flex-col min-h-screen bg-[#F8FAFC] text-[#475569]">
       <ScrollToTop />
       <Navbar />
       <main className="flex-grow">

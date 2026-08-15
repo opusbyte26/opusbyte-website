@@ -5,14 +5,14 @@ import { ArrowRight, ChevronRight, MessageSquare, Sparkles } from 'lucide-react'
 
 export default function FinalCTA() {
   return (
-    <section className="py-24 bg-[#3F481A] text-[#FFFFFF] relative overflow-hidden">
+    <section className="py-24 bg-[#0F172A] text-[#FFFFFF] relative overflow-hidden">
       
       {/* Background Decorative Element */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#BDC033]/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#2563EB]/20 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 relative z-10">
         
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#65721F]/60 border border-[#BDC033]/40 text-xs font-bold text-[#BDC033]">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#172554] border border-[#2563EB]/40 text-xs font-bold text-[#38BDF8]">
           <MessageSquare className="w-4 h-4" />
           <span>START A PROJECT</span>
         </div>
@@ -21,7 +21,7 @@ export default function FinalCTA() {
           Have an idea? Let's build it.
         </h2>
 
-        <p className="text-lg sm:text-xl text-[#EEF2C9]/90 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-xl text-[#94A3B8] max-w-2xl mx-auto leading-relaxed">
           Tell us what you're building, what you're trying to improve, or where technology could take your business next.
         </p>
 
@@ -31,9 +31,9 @@ export default function FinalCTA() {
             <ArrowRight className="w-5 h-5" />
           </Link>
 
-          <Link href="/services" className="btn-secondary text-base bg-[#FFFFFF] text-[#3F481A]">
+          <Link href="/services" className="btn-secondary text-base bg-[#FFFFFF] text-[#0F172A]">
             <span>Explore Our Services</span>
-            <ChevronRight className="w-5 h-5 text-[#65721F]" />
+            <ChevronRight className="w-5 h-5 text-[#2563EB]" />
           </Link>
         </div>
 

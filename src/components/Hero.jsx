@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronRight, Cpu, Sparkles, ShieldCheck, Terminal } from 'lucide-react';
+import { ArrowRight, ChevronRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] lg:min-h-screen flex items-center pt-28 pb-16 overflow-hidden bg-[#F8F9F3]">
+    <section className="relative min-h-[90vh] lg:min-h-screen flex items-center pt-28 pb-16 overflow-hidden bg-[#0F172A]">
 
       {/* Background Hero Video Container */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
@@ -14,17 +14,19 @@ export default function Hero() {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover opacity-50 mix-blend-multiply scale-105"
+          preload="metadata"
+          poster="/hero-poster.jpg"
+          disablePictureInPicture
+          controlsList="nodownload"
+          className="w-full h-full object-cover"
         >
+          <source src="/hero.webm" type="video/webm" />
           <source src="/hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
-        {/* Subtle Warm-White Overlay (Non-heavy light background gradient) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F8F9F3]/80 via-[#F8F9F3]/60 to-[#F8F9F3]"></div>
-
-        {/* Decorative Grid Lines */}
-        <div className="absolute inset-0 grid-bg opacity-30"></div>
+        {/* Subtle Dark Scrim Gradient for 100% Text Legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/85 via-[#0F172A]/60 to-[#0F172A]/25"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -35,12 +37,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FFFFFF] border border-[#E1E5D3] shadow-xs text-xs font-semibold text-[#3F481A]"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0F172A]/80 backdrop-blur border border-[#1E293B] shadow-md text-xs font-semibold text-[#FFFFFF]"
           >
-            <span className="w-2 h-2 rounded-full bg-[#BDC033] animate-pulse"></span>
-            <span className="text-[#65721F]">OPUSBYTE SOLUTIONS</span>
-            <span className="text-[#E1E5D3]">|</span>
-            <span className="text-[#68705A]">IT Services & Consulting Founded 2026</span>
+            <span className="w-2 h-2 rounded-full bg-[#38BDF8] animate-pulse"></span>
+            <span className="text-[#38BDF8]">OPUSBYTE SOLUTIONS</span>
+            <span className="text-[#1E293B]">|</span>
+            <span className="text-[#CBD5E1]">IT Services & Consulting Founded 2026</span>
           </motion.div>
 
           {/* Headline */}
@@ -50,14 +52,11 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="space-y-4"
           >
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#3F481A] tracking-tight leading-[1.08]">
-              Building What's <span className="relative inline-block text-[#65721F]">
-                Next
-                <span className="absolute bottom-2 left-0 right-0 h-3 bg-[#EEF2C9] -z-10 rounded"></span>
-              </span>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#FFFFFF] tracking-tight leading-[1.08] drop-shadow-md">
+              Building What's <span className="text-[#38BDF8]">Next</span>
             </h1>
 
-            <p className="text-xl sm:text-2xl font-medium text-[#3F481A]/90 max-w-2xl leading-snug">
+            <p className="text-xl sm:text-2xl font-medium text-[#F1F5F9] max-w-2xl leading-snug drop-shadow-sm">
               Technology solutions that transform ideas into intelligent digital products.
             </p>
           </motion.div>
@@ -67,7 +66,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg text-[#68705A] max-w-2xl leading-relaxed"
+            className="text-base sm:text-lg text-[#CBD5E1] max-w-2xl leading-relaxed"
           >
             From software engineering to AI and cloud transformation, we build scalable, secure, and future-ready digital solutions designed for what's next.
           </motion.p>
@@ -84,9 +83,9 @@ export default function Hero() {
               <ArrowRight className="w-5 h-5" />
             </Link>
 
-            <Link href="/services" className="btn-secondary text-base">
+            <Link href="/services" className="btn-secondary text-base bg-[#0F172A]/80 backdrop-blur border border-[#1E293B] text-[#FFFFFF] hover:bg-[#172554] hover:text-[#38BDF8]">
               <span>Explore Our Services</span>
-              <ChevronRight className="w-5 h-5 text-[#65721F]" />
+              <ChevronRight className="w-5 h-5 text-[#38BDF8]" />
             </Link>
           </motion.div>
 
@@ -97,24 +96,24 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="pt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl"
           >
-            <div className="p-4 rounded-xl bg-[#FFFFFF]/90 backdrop-blur border border-[#E1E5D3] shadow-xs">
-              <div className="text-2xl font-bold text-[#3F481A]">11–50</div>
-              <div className="text-xs text-[#68705A] font-medium">Tech Specialists</div>
+            <div className="p-4 rounded-xl bg-[#0F172A]/85 backdrop-blur border border-[#1E293B] shadow-md">
+              <div className="text-2xl font-bold text-[#FFFFFF]">11–50</div>
+              <div className="text-xs text-[#94A3B8] font-medium">Tech Specialists</div>
             </div>
 
-            <div className="p-4 rounded-xl bg-[#FFFFFF]/90 backdrop-blur border border-[#E1E5D3] shadow-xs">
-              <div className="text-2xl font-bold text-[#65721F]">99.9%</div>
-              <div className="text-xs text-[#68705A] font-medium">Uptime Standards</div>
+            <div className="p-4 rounded-xl bg-[#0F172A]/85 backdrop-blur border border-[#1E293B] shadow-md">
+              <div className="text-2xl font-bold text-[#38BDF8]">99.9%</div>
+              <div className="text-xs text-[#94A3B8] font-medium">Uptime Standards</div>
             </div>
 
-            <div className="p-4 rounded-xl bg-[#FFFFFF]/90 backdrop-blur border border-[#E1E5D3] shadow-xs">
-              <div className="text-2xl font-bold text-[#3F481A]">AI + Cloud</div>
-              <div className="text-xs text-[#68705A] font-medium">Native Engineering</div>
+            <div className="p-4 rounded-xl bg-[#0F172A]/85 backdrop-blur border border-[#1E293B] shadow-md">
+              <div className="text-2xl font-bold text-[#FFFFFF]">AI + Cloud</div>
+              <div className="text-xs text-[#94A3B8] font-medium">Native Engineering</div>
             </div>
 
-            <div className="p-4 rounded-xl bg-[#FFFFFF]/90 backdrop-blur border border-[#E1E5D3] shadow-xs">
-              <div className="text-2xl font-bold text-[#65721F]">2026</div>
-              <div className="text-xs text-[#68705A] font-medium">Modern Founded</div>
+            <div className="p-4 rounded-xl bg-[#0F172A]/85 backdrop-blur border border-[#1E293B] shadow-md">
+              <div className="text-2xl font-bold text-[#38BDF8]">2026</div>
+              <div className="text-xs text-[#94A3B8] font-medium">Modern Founded</div>
             </div>
           </motion.div>
 

@@ -26,33 +26,33 @@ export default function TechCapabilities() {
   ];
 
   return (
-    <section className="py-24 bg-[#F8F9F3] border-t border-b border-[#E1E5D3]">
+    <section className="py-24 bg-[#F8FAFC] border-t border-b border-[#E2E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="section-label justify-center">03 — CAPABILITIES</div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#3F481A]">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0F172A]">
             Engineering the technology behind tomorrow.
           </h2>
-          <p className="text-base sm:text-lg text-[#68705A]">
+          <p className="text-base sm:text-lg text-[#64748B]">
             We bridge deep software engineering expertise with cutting-edge artificial intelligence and cloud architectures.
           </p>
         </div>
 
         {/* Interactive Animated Node Network Section */}
-        <div className="bg-[#3F481A] rounded-2xl p-6 sm:p-10 text-[#FFFFFF] shadow-xl relative overflow-hidden">
+        <div className="bg-[#0F172A] rounded-2xl p-6 sm:p-10 text-[#FFFFFF] shadow-xl relative overflow-hidden border border-[#1E293B]">
           
           {/* Subtle background glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#BDC033]/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#2563EB]/15 rounded-full blur-3xl pointer-events-none"></div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             
             {/* Network Interactive Visual */}
-            <div className="lg:col-span-7 relative min-h-[340px] sm:min-h-[400px] flex items-center justify-center bg-[#2f3713]/50 rounded-xl border border-[#65721F]/40 p-4">
+            <div className="lg:col-span-7 relative min-h-[340px] sm:min-h-[400px] flex items-center justify-center bg-[#172554]/60 rounded-xl border border-[#1E293B] p-4">
               
-              {/* SVG Connecting Lines with Lime Glow */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none stroke-[#BDC033]/40 stroke-2">
+              {/* SVG Connecting Lines with Tech Blue Glow */}
+              <svg className="absolute inset-0 w-full h-full pointer-events-none stroke-[#2563EB]/50 stroke-2">
                 <line x1="50%" y1="25%" x2="20%" y2="50%" strokeDasharray="4 4" />
                 <line x1="50%" y1="25%" x2="80%" y2="50%" strokeDasharray="4 4" />
                 <line x1="20%" y1="50%" x2="35%" y2="80%" />
@@ -79,10 +79,10 @@ export default function TechCapabilities() {
                   >
                     <div className={`flex items-center gap-2 px-3 py-2 rounded-xl border transition-all duration-300 shadow-md ${
                       isActive 
-                        ? 'bg-[#BDC033] text-[#3F481A] border-[#FFFFFF] font-bold ring-4 ring-[#BDC033]/30' 
-                        : 'bg-[#3F481A] text-[#EEF2C9] border-[#65721F] hover:border-[#BDC033]'
+                        ? 'bg-[#2563EB] text-[#FFFFFF] border-[#FFFFFF] font-bold ring-4 ring-[#2563EB]/40' 
+                        : 'bg-[#0F172A] text-[#CBD5E1] border-[#1E293B] hover:border-[#2563EB]'
                     }`}>
-                      <IconComponent className={`w-4 h-4 ${isActive ? 'text-[#3F481A]' : 'text-[#BDC033]'}`} />
+                      <IconComponent className={`w-4 h-4 ${isActive ? 'text-[#FFFFFF]' : 'text-[#38BDF8]'}`} />
                       <span className="text-xs font-semibold whitespace-nowrap">{node.label}</span>
                     </div>
                   </button>
@@ -93,7 +93,7 @@ export default function TechCapabilities() {
 
             {/* Node Detail Inspector Box */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#65721F]/40 border border-[#BDC033]/40 text-xs font-semibold text-[#BDC033]">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#172554] border border-[#2563EB]/40 text-xs font-semibold text-[#38BDF8]">
                 <Zap className="w-3.5 h-3.5" />
                 <span>ACTIVE NODE INSPECTOR</span>
               </div>
@@ -103,14 +103,14 @@ export default function TechCapabilities() {
                   <h3 className="text-2xl font-bold text-[#FFFFFF] flex items-center gap-3">
                     <span>{node.label}</span>
                   </h3>
-                  <p className="text-sm text-[#EEF2C9]/90 leading-relaxed">
+                  <p className="text-sm text-[#94A3B8] leading-relaxed">
                     {node.desc}. Designed with enterprise security, high-concurrency protocols, and zero-trust verification.
                   </p>
                   
-                  <div className="pt-4 border-t border-[#65721F]/50 flex flex-wrap gap-2">
-                    <span className="px-2.5 py-1 rounded bg-[#65721F] text-xs text-[#FFFFFF]">High Performance</span>
-                    <span className="px-2.5 py-1 rounded bg-[#65721F] text-xs text-[#FFFFFF]">Fault Tolerant</span>
-                    <span className="px-2.5 py-1 rounded bg-[#65721F] text-xs text-[#FFFFFF]">Automated Monitoring</span>
+                  <div className="pt-4 border-t border-[#1E293B] flex flex-wrap gap-2">
+                    <span className="px-2.5 py-1 rounded bg-[#172554] border border-[#2563EB]/30 text-xs text-[#CBD5E1]">High Performance</span>
+                    <span className="px-2.5 py-1 rounded bg-[#172554] border border-[#2563EB]/30 text-xs text-[#CBD5E1]">Fault Tolerant</span>
+                    <span className="px-2.5 py-1 rounded bg-[#172554] border border-[#2563EB]/30 text-xs text-[#CBD5E1]">Automated Monitoring</span>
                   </div>
                 </div>
               ))}
@@ -129,11 +129,11 @@ export default function TechCapabilities() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: i * 0.05 }}
-              className="p-6 rounded-xl bg-[#FFFFFF] border border-[#E1E5D3] hover:border-[#BDC033] hover:shadow-sm transition-all"
+              className="p-6 rounded-xl bg-[#FFFFFF] border border-[#E2E8F0] hover:border-[#2563EB] hover:shadow-sm transition-all"
             >
-              <div className="w-2 h-2 rounded-full bg-[#BDC033] mb-4"></div>
-              <h3 className="font-bold text-base text-[#3F481A] mb-2">{cap.title}</h3>
-              <p className="text-xs text-[#68705A] leading-relaxed">{cap.desc}</p>
+              <div className="w-2 h-2 rounded-full bg-[#2563EB] mb-4"></div>
+              <h3 className="font-bold text-base text-[#0F172A] mb-2">{cap.title}</h3>
+              <p className="text-xs text-[#64748B] leading-relaxed">{cap.desc}</p>
             </motion.div>
           ))}
         </div>
